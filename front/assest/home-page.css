@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab:100,100i,300,300i,400,400i,600,600i,700,700i');
+
+
+:root {
+    --bg: #001D66;
+    --title: #00257F;
+    --para-text: rgba(0, 0, 0, 0.67);
+    --title-font: 'Josefin Slab', serif;
+    --text-font: 'PT Serif', Serif;
+    --width: 20em;
+}
+
+body {
+    background: var(--bg);
+    display: grid;
+    place-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--title);
+    text-transform: capitalize;
+    font-family: var(--title-font);
+}
+
+section,
+aside,
+article,
+div,
+img {
+    box-sizing: border-box;
+}
+
+
+#topnav {
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: gray;
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.nav-link {
+    display: inline-block;
+    width: 100px;
+    height: 55px;
+
+    color: White;
+
+    /* centering text */
+    text-align: center;
+    /* horizontally */
+    line-height: 55px;
+    /* vertically */
+
+    text-decoration: none;
+}
+
+#logo {
+    width: 120px;
+
+    background-color: 00257F;
+
+    font-weight: bold;
+}
+
+#about {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* style for blog card */
+
+section img {
+    width: 100%;
+}
+
+section {
+    width: var(--width);
+    background: #fff;
+    padding: 20px;
+}
+
+section h3 {
+    font-size: calc(var(--width)/10);
+}
+
+section p {
+    font-family: var(--text-font);
+    color: var(--para-text);
+    font-size: calc(var(--width)/20);
+}
+
+.date {
+    font-size: calc(var(--width)/25);
+}
+
+h1 {
+    color: #00257F;
+}
+
+section a {
+    text-decoration: none;
+    color: var(--bg);
+    font-family: var(--title-font);
+    font-weight: 700;
+    font-size: calc(var(--width)/23);
+}
+
+.main-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+form {
+    padding: 25px;
+    margin: 25px;
+    box-shadow: 0 2px 5px #ffff;
+    background: #ffff;
+}
+
+.fas {
+    margin: 25px 10px 0;
+    font-size: 72px;
+    color: #00257F;
+}
+
+.fa-envelope {
+    transform: rotate(-20deg);
+}
+
+.fa-at,
+.fa-mail-bulk {
+    transform: rotate(10deg);
+}
+
+input,
+textarea {
+    width: calc(100% - 18px);
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #00257F;
+    outline: none;
+}
+
+input::placeholder {
+    color: #00257F;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #00257F;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+button:hover {
+    background: #00257F;
+}
+
+@media (min-width: 568px) {
+    .main-block {
+        flex-direction: row;
+    }
+
+    .left-part,
+    form {
+        width: 50%;
+    }
+
+    .fa-envelope {
+        margin-top: 0;
+        margin-left: 20%;
+    }
+
+    .fa-at {
+        margin-top: -10%;
+        margin-left: 65%;
+    }
+
+    .fa-mail-bulk {
+        margin-top: 2%;
+        margin-left: 28%;
+    }
+}
